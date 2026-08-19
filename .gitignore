@@ -13,8 +13,10 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# generated build output
+/dist/
+/.vite/
+/_next/
 /out/
 
 # misc
@@ -34,8 +36,7 @@ yarn-error.log*
 .vercel
 
 # typescript
-next-env.d.ts
-/dist/
+tsconfig.tsbuildinfo
 /.wrangler/
 /.sites-runtime/
 /outputs/
@@ -43,25 +44,10 @@ next-env.d.ts
 
 # Local source archive
 /helper-skills-dialogue-source-v2.zip
-/tsconfig.tsbuildinfo
 /.playwright-cli/
 /.nojekyll
 
-# Next static-export metadata files are not served by GitHub Pages
+# Local static preview artifacts
 /**/__next*.txt
 /**/index.txt
-
-# Generated static-export surfaces kept outside the source tree
-/_next/
-/404.html
-/404/
-/_not-found/
-/index.html
-/index.txt
-/v2/
-/favicon.svg
-/file.svg
-/globe.svg
-/window.svg
-/*__next*.txt
 /docs/local-pages-check.png

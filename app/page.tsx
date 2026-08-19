@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { layers, techniques, type LayerId, type PracticeCase } from "./content";
+import { siteBasePath } from "./site";
 
 const repositoryUrl = "https://github.com/holynova/psy-talks";
-const siteBasePath = process.env.GITHUB_PAGES === "1" ? "/psy-talks" : "";
 
 const sourceLinks = [
   {
@@ -335,7 +335,7 @@ export default function Home() {
               }
               type="button"
               onClick={() => scrollToSection(layer.id)}
-              style={{ "--tab-accent": layer.accent } as React.CSSProperties}
+              style={{ "--tab-accent": layer.accent } as CSSProperties}
             >
               <span className="tab-number">{layer.number}</span>
               <span>
@@ -400,7 +400,7 @@ export default function Home() {
                 key={layer.id}
                 id={"layer-" + layer.id}
                 className="layer-section"
-                style={{ "--layer-accent": layer.accent } as React.CSSProperties}
+                style={{ "--layer-accent": layer.accent } as CSSProperties}
               >
                 <div className="layer-heading">
                   <div className="layer-heading-main">
@@ -636,7 +636,7 @@ function CaseBlock({
       </summary>
       <div
         className="case-content"
-        style={{ "--case-accent": accent } as React.CSSProperties}
+        style={{ "--case-accent": accent } as CSSProperties}
       >
         <div className="wrong-heading">
           <span className="wrong-dot" aria-hidden="true" />

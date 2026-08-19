@@ -1,33 +1,19 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const developmentPreviewMeta =
-  /<meta(?=[^>]*\bname=["']codex-preview["'])(?=[^>]*\bcontent=["']development["'])[^>]*>/i;
+const stylesheetLink = /<link[^>]+rel=["']stylesheet["'][^>]*>/i;
 
-test("renders development preview metadata", async () => {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
+test("renders static home and v2 pages with CSS assets", async () => {
+  const pages = [
+    ["dist/index.html", "助人对话练习册"],
+    ["dist/v2/index.html", "助人对话训练手册"],
+  ];
 
-  const response = await worker.fetch(
-    new Request("http://localhost/", {
-      headers: { accept: "text/html" },
-    }),
-    {
-      ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
-      },
-    },
-    {
-      waitUntil() {},
-      passThroughOnException() {},
-    },
-  );
-
-  assert.equal(response.status, 200);
-  assert.match(
-    response.headers.get("content-type") ?? "",
-    /^text\/html\b/i,
-  );
-  assert.match(await response.text(), developmentPreviewMeta);
+  for (const [file, marker] of pages) {
+    const html = await readFile(new URL(`../${file}`, import.meta.url), "utf8");
+    assert.match(html, stylesheetLink, `${file} should include a stylesheet`);
+    assert.match(html, new RegExp(marker), `${file} should contain its page marker`);
+    assert.doesNotMatch(html, /\/psy-talks\/_next\//, `${file} should not use Next assets`);
+  }
 });

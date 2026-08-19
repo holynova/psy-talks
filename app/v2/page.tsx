@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState, type CSSProperties } from "react";
-import Link from "next/link";
 import { techniques, type PracticeCase, type Technique } from "../content";
+import { siteBasePath } from "../site";
 
 const repositoryUrl = "https://github.com/holynova/psy-talks";
 
@@ -85,9 +85,12 @@ function findTechnique(id: string): Technique {
   return techniques.find((technique) => technique.id === id) ?? techniques[0];
 }
 
-function compactCaseTitle(situation: string) {
-  const text = situation.replace(/[“”‘’\"]+/g, "").trim();
-  return text.length > 28 ? text.slice(0, 28) + "……" : text;
+function removeOuterQuotes(text: string) {
+  const value = text.trim();
+  const startsWithQuote = /^[“‘\"']/.test(value);
+  const endsWithQuote = /[”’\"']$/.test(value);
+
+  return startsWithQuote && endsWithQuote ? value.slice(1, -1).trim() : value;
 }
 
 function CaseComparison({
@@ -101,16 +104,15 @@ function CaseComparison({
     <article className="v2-case">
       <div className="v2-case-label">
         <span>CASE {caseNumber}</span>
-        <span>{compactCaseTitle(practiceCase.situation)}</span>
       </div>
-      <blockquote>{practiceCase.situation}</blockquote>
+      <blockquote>{removeOuterQuotes(practiceCase.situation)}</blockquote>
       <div className="v2-comparison">
         <section className="v2-response v2-response-wrong" aria-label="别做啥">
           <h4>别做啥 <small>错误示范</small></h4>
           <ul>
             {practiceCase.wrong.map((item) => (
               <li key={item.label}>
-                <p className="v2-reply">“{item.reply}”</p>
+                <p className="v2-reply">{removeOuterQuotes(item.reply)}</p>
                 <p className="v2-why">{item.label}：{item.why}</p>
               </li>
             ))}
@@ -121,7 +123,7 @@ function CaseComparison({
           <ul>
             {practiceCase.better.map((reply, index) => (
               <li key={reply}>
-                <p className="v2-reply">“{reply}”</p>
+                <p className="v2-reply">{removeOuterQuotes(reply)}</p>
                 <p className="v2-why">回应 {String.fromCharCode(65 + index)} · 保留对方的选择权</p>
               </li>
             ))}
@@ -168,7 +170,7 @@ export default function ReadingEdition() {
     <main className={isDark ? "v2-shell v2-dark" : "v2-shell"}>
       <aside className="v2-sidebar">
         <div className="v2-brand">
-          <Link href="/">助人对话 <span>{"//"}</span> SKILLS</Link>
+          <a href={`${siteBasePath}/`}>助人对话 <span>{"//"}</span> SKILLS</a>
           <span>Reading Edition</span>
         </div>
         <div className="v2-sidebar-rule" />
@@ -206,10 +208,10 @@ export default function ReadingEdition() {
             <span className="v2-wide-label">{isDark ? "切换明亮模式" : "切换暗黑模式"}</span>
             <span className="v2-compact-label">{isDark ? "明亮" : "暗色"}</span>
           </button>
-          <Link href="/">
+          <a href={`${siteBasePath}/`}>
             <span className="v2-wide-label">← 返回旧版练习地图</span>
             <span className="v2-compact-label">旧版 ↗</span>
-          </Link>
+          </a>
         </div>
       </aside>
 
@@ -219,7 +221,7 @@ export default function ReadingEdition() {
             <span className="v2-eyebrow">HELPING SKILLS / RE-EDITED</span>
             <h1>助人对话训练手册</h1>
           </div>
-          <Link href="/">v1.1 练习地图 ↗</Link>
+          <a href={`${siteBasePath}/`}>v1.1 练习地图 ↗</a>
         </header>
 
         <section className="v2-recall" aria-labelledby="v2-recall-title">
@@ -229,7 +231,7 @@ export default function ReadingEdition() {
           </div>
           <div className="v2-recall-card">
             <span>闪卡 {String(recallIndex + 1).padStart(2, "0")} / {String(recallPrompts.length).padStart(2, "0")}</span>
-            <p>“{recallPrompts[recallIndex]}”</p>
+            <p>{removeOuterQuotes(recallPrompts[recallIndex])}</p>
             <button type="button" onClick={nextRecall}>换一个场景</button>
           </div>
         </section>
@@ -301,7 +303,7 @@ export default function ReadingEdition() {
           <p>好的回应不一定漂亮，但应该让对方更接近自己的经验，而不是更接近你的答案。</p>
           <div>
             <span>助人技术 · 阅读版 v2</span>
-            <Link href="/">返回 v1.1 练习地图</Link>
+            <a href={`${siteBasePath}/`}>返回 v1.1 练习地图</a>
             <a href={repositoryUrl} target="_blank" rel="noreferrer">GitHub 源码 ↗</a>
           </div>
         </footer>
