@@ -208,10 +208,6 @@ export default function ReadingEdition() {
             <span className="v2-wide-label">{isDark ? "切换明亮模式" : "切换暗黑模式"}</span>
             <span className="v2-compact-label">{isDark ? "明亮" : "暗色"}</span>
           </button>
-          <a href={`${siteBasePath}/`}>
-            <span className="v2-wide-label">← 返回旧版练习地图</span>
-            <span className="v2-compact-label">旧版 ↗</span>
-          </a>
         </div>
       </aside>
 
@@ -221,7 +217,6 @@ export default function ReadingEdition() {
             <span className="v2-eyebrow">HELPING SKILLS / RE-EDITED</span>
             <h1>助人对话训练手册</h1>
           </div>
-          <a href={`${siteBasePath}/`}>v1.1 练习地图 ↗</a>
         </header>
 
         <section className="v2-recall" aria-labelledby="v2-recall-title">
@@ -303,7 +298,6 @@ export default function ReadingEdition() {
           <p>好的回应不一定漂亮，但应该让对方更接近自己的经验，而不是更接近你的答案。</p>
           <div>
             <span>助人技术 · 阅读版 v2</span>
-            <a href={`${siteBasePath}/`}>返回 v1.1 练习地图</a>
             <a href={repositoryUrl} target="_blank" rel="noreferrer">GitHub 源码 ↗</a>
           </div>
         </footer>
