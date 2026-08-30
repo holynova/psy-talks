@@ -4,5 +4,9 @@
 
 ![截图](implementation-v2-reference-state.jpg)
 
-https://github.com/holynova/psy-talks
-https://holynova.github.io/psy-talks/
+- [GitHub Repo](https://github.com/holynova/psy-talks)
+- [GitHub Pages](https://holynova.github.io/psy-talks/)
+
+<a href="https://holynova.github.io/psy-talks/"><img src="github-pages-qr.png" width="180" alt="扫描访问助人对话练习册" /></a>
+
+手机扫描二维码即可访问在线练习册。
