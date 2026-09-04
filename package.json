@@ -9,7 +9,7 @@
     "install:ci": "npm ci",
     "dev": "vite",
     "build": "vite build",
-    "build:pages": "GITHUB_PAGES=1 vite build && mkdir -p docs && cp -R dist/. docs/ && touch docs/.nojekyll",
+    "build:pages": "GITHUB_PAGES=1 vite build --outDir docs && touch docs/.nojekyll",
     "start": "vite preview",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "tsc --noEmit"
