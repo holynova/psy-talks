@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">助人对话练习册</title>
+  <desc id="desc">面向对话微技能学习的练习地图，通过阅读和练习梳理助人对话方式。</desc>
+  <rect width="1200" height="360" rx="28" fill="#f1ede6"/>
+  <path d="M0 310C250 280 410 342 650 300s350-18 550 20v40H0Z" fill="#758ea0" opacity=".12"/>
+  <text x="58" y="52" fill="#bb6e50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" letter-spacing="2.5">CONVERSATION PRACTICE MAP</text>
+  <path d="M58 70H710" stroke="#758ea0" stroke-width="2" opacity=".6"/>
+  <text x="58" y="126" fill="#2b3035" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="52" font-weight="700">助人对话练习册</text>
+  <text x="60" y="190" fill="#758ea0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, sans-serif" font-size="21">面向对话微技能学习的练习地图，通过阅读和练习梳理助人对话方式。</text>
+    <g transform="translate(60 244)"><rect width="250" height="34" rx="17" fill="#bb6e50"/><text x="18" y="23" fill="#f1ede6" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">PROJECT-NATIVE README</text></g>
+  <g transform="translate(830 42)"><path d="M0 32q112-28 178 2v210q-66-30-178-3Z" fill="#2b3035"/><path d="M178 34q64-30 150-2v207q-86-25-150 2Z" fill="#2b3035"/><path d="M178 40v201" stroke="#bb6e50" stroke-width="5"/><path d="M28 80h116M28 112h98M28 144h124M208 82h108M208 114h88M208 146h116" stroke="#758ea0" stroke-width="7" stroke-linecap="round"/></g>
+</svg>

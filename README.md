@@ -2,6 +2,11 @@
 
 面向对话微技能学习的练习地图，通过阅读和练习梳理助人对话方式。
 
+<p align="center">
+  <img src="assets/readme/hero.svg" width="100%" alt="助人对话练习册: 面向对话微技能学习的练习地图，通过阅读和练习梳理助人对话方式。">
+</p>
+
+
 ![助人对话练习册阅读界面](implementation-v2-reference-state.jpg)
 
 - [GitHub Repo](https://github.com/holynova/psy-talks)
