@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">Psy Talks - Helping Skills &amp; Counseling Dialogue Training Manual</title>
+  <desc id="desc">Visual guide and dialogue workbench for helping skills and counseling micro-techniques, contrasting instinctive pitfalls like premature advice with calibrated empathetic responses across 18 techniques and 54 real-world cases.</desc>
+
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="psyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#070c14"/>
+    </linearGradient>
+
+    <radialGradient id="warmAmberGlow" cx="70%" cy="25%" r="55%">
+      <stop offset="0%" stop-color="#c2593f" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#c2593f" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="tealCalmGlow" cx="25%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="dialogueGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.5"/>
+      <circle cx="0" cy="0" r="1.2" fill="#c2593f" fill-opacity="0.3"/>
+    </pattern>
+
+    <linearGradient id="psyCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141c2e"/>
+      <stop offset="100%" stop-color="#0e1524"/>
+    </linearGradient>
+
+    <linearGradient id="warmTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="40%" stop-color="#fdba74"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas Frame -->
+  <rect width="1200" height="440" rx="16" fill="url(#psyBg)"/>
+  <rect width="1200" height="440" rx="16" fill="url(#dialogueGrid)"/>
+  <rect width="1200" height="440" rx="16" fill="url(#warmAmberGlow)"/>
+  <rect width="1200" height="440" rx="16" fill="url(#tealCalmGlow)"/>
+  <rect x="1" y="1" width="1198" height="438" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- LEFT COLUMN: Identity & Counseling Philosophy -->
+  <g id="psy-left" transform="translate(60, 48)">
+    <!-- Eyebrow Badge -->
+    <g id="eyebrow">
+      <rect x="0" y="0" width="375" height="28" rx="14" fill="#221518" stroke="#c2593f" stroke-width="1"/>
+      <circle cx="14" cy="14" r="4" fill="#f97316"/>
+      <text x="26" y="19" font-family="ui-monospace, monospace" font-size="11.5" font-weight="600" fill="#fdba74" letter-spacing="1">COUNSELING PSYCHOLOGY · HELPING SKILLS</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" fill="#f8fafc" letter-spacing="-0.5">
+      Psy Talks · 助人对话练习册
+    </text>
+    <text x="0" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="24" font-weight="600" fill="url(#warmTextGrad)">
+      18 咨询微技能 · 54 真实案例与更优回应
+    </text>
+
+    <!-- Value Proposition -->
+    <text x="0" y="158" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="14.5" fill="#94a3b8" line-height="24">
+      <tspan x="0" dy="0">在回应痛苦之前，先克制习惯性的过早安慰与急躁解题。</tspan>
+      <tspan x="0" dy="24">系统梳理 6 大咨询层级与 18 项微技能，深度剖析“别做啥 / 要说啥”，</tspan>
+      <tspan x="0" dy="24">配备 54 个高保真实战场景、3 种错漏拆解与可校准的共情范式。</tspan>
+    </text>
+
+    <!-- Feature Metric Pills -->
+    <g id="metric-pills" transform="translate(0, 240)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="112" height="48" rx="8" fill="#141c2e" stroke="#c2593f" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="14" y="22" font-family="ui-monospace, monospace" font-size="16" font-weight="700" fill="#fdba74">6 大层级</text>
+        <text x="14" y="38" font-family="-apple-system, sans-serif" font-size="10.5" fill="#64748b">PROGRESSION</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(122, 0)">
+        <rect width="118" height="48" rx="8" fill="#141c2e" stroke="#1e293b" stroke-width="1"/>
+        <text x="14" y="22" font-family="ui-monospace, monospace" font-size="16" font-weight="700" fill="#38bdf8">18 微技能</text>
+        <text x="14" y="38" font-family="-apple-system, sans-serif" font-size="10.5" fill="#64748b">MICRO-SKILLS</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(250, 0)">
+        <rect width="118" height="48" rx="8" fill="#141c2e" stroke="#10b981" stroke-width="1" stroke-opacity="0.4"/>
+        <text x="14" y="22" font-family="ui-monospace, monospace" font-size="16" font-weight="700" fill="#34d399">54 实战案例</text>
+        <text x="14" y="38" font-family="-apple-system, sans-serif" font-size="10.5" fill="#64748b">CASE STUDIES</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(378, 0)">
+        <rect width="122" height="48" rx="8" fill="#141c2e" stroke="#1e293b" stroke-width="1"/>
+        <text x="14" y="22" font-family="ui-monospace, monospace" font-size="16" font-weight="700" fill="#a5b4fc">双版本</text>
+        <text x="14" y="38" font-family="-apple-system, sans-serif" font-size="10.5" fill="#64748b">MAP &amp; V2 DOCS</text>
+      </g>
+    </g>
+
+    <!-- Live Demo Command Hint -->
+    <g id="command-hint" transform="translate(0, 310)">
+      <rect width="500" height="36" rx="6" fill="#090e18" stroke="#1e293b" stroke-width="1"/>
+      <text x="14" y="23" font-family="ui-monospace, monospace" font-size="13" fill="#fdba74">✦</text>
+      <text x="32" y="23" font-family="ui-monospace, monospace" font-size="13" fill="#e2e8f0">holynova.github.io/psy-talks</text>
+      <text x="360" y="23" font-family="ui-monospace, monospace" font-size="11" fill="#64748b">GitHub Pages</text>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: Counseling Dialogue Flow & Empathy Spectrum -->
+  <g id="psy-right" transform="translate(590, 36)">
+    <!-- TOP CARD: Case Dialogue Flow (x=0, y=0, w=560, h=175) -->
+    <g id="card-dialogue-flow" transform="translate(0, 0)">
+      <rect width="560" height="175" rx="10" fill="url(#psyCardGrad)" stroke="#1e293b" stroke-width="1.2"/>
+      
+      <!-- Card Header -->
+      <circle cx="16" cy="18" r="4" fill="#f97316"/>
+      <text x="28" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#e2e8f0">微技能 01 · 共情性理解 (进入对方的参照框架)</text>
+      <text x="450" y="21" font-family="ui-monospace, monospace" font-size="10.5" fill="#fdba74">先贴近 · 再确认</text>
+
+      <!-- Client Statement (Quote bubble) -->
+      <g transform="translate(16, 38)">
+        <rect width="528" height="38" rx="6" fill="#1b2234" stroke="#2a354d" stroke-width="0.8"/>
+        <text x="12" y="16" font-family="ui-monospace, monospace" font-size="9" fill="#94a3b8">来访者原声 (SITUATION):</text>
+        <text x="12" y="30" font-family="-apple-system, sans-serif" font-size="11" font-style="italic" fill="#e2e8f0">“我最近一想到上班就胸口发紧，可我还不能辞职……”</text>
+      </g>
+
+      <!-- Listener Calibration Process -->
+      <g transform="translate(16, 86)">
+        <!-- Step 1: Mirror physical feeling -->
+        <g transform="translate(0, 0)">
+          <rect width="168" height="42" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+          <text x="10" y="16" font-family="ui-monospace, monospace" font-size="8.5" fill="#64748b">1. 抓取身心体验</text>
+          <text x="10" y="32" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#38bdf8">身体发紧 · 两难困境</text>
+        </g>
+
+        <!-- Connector Arrow -->
+        <path d="M 174 21 L 188 21" stroke="#64748b" stroke-width="1.2"/>
+        <polygon points="192,21 186,18 186,24" fill="#64748b"/>
+
+        <!-- Step 2: Empathetic response -->
+        <g transform="translate(196, 0)">
+          <rect width="180" height="42" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+          <text x="10" y="16" font-family="ui-monospace, monospace" font-size="8.5" fill="#a7f3d0">2. 重述现实与窒息感</text>
+          <text x="10" y="32" font-family="-apple-system, sans-serif" font-size="10" font-weight="600" fill="#6ee7b7">想撑撑不住，想走走不了</text>
+        </g>
+
+        <!-- Connector Arrow -->
+        <path d="M 382 21 L 396 21" stroke="#64748b" stroke-width="1.2"/>
+        <polygon points="400,21 394,18 394,24" fill="#64748b"/>
+
+        <!-- Step 3: Calibration Gate -->
+        <g transform="translate(404, 0)">
+          <rect width="124" height="42" rx="4" fill="#2d1d0c" stroke="#f59e0b" stroke-width="1"/>
+          <text x="10" y="16" font-family="ui-monospace, monospace" font-size="8.5" fill="#fde68a">3. 留出校准切口</text>
+          <text x="10" y="32" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#fde047">“我理解得对吗？”</text>
+        </g>
+      </g>
+
+      <!-- Bottom Hint -->
+      <text x="18" y="160" font-family="-apple-system, sans-serif" font-size="10.5" fill="#94a3b8">
+        将解释权完整还给来访者，避免权威式代言与居高临下的诊断。
+      </text>
+    </g>
+
+    <!-- BOTTOM PANEL: Wrong vs Better Dual Panel (x=0, y=190, w=560, h=175) -->
+    <g id="card-comparison" transform="translate(0, 190)">
+      <rect width="560" height="175" rx="10" fill="url(#psyCardGrad)" stroke="#1e293b" stroke-width="1.2"/>
+
+      <!-- LEFT COLUMN: 别做啥 (Don't / Pitfalls) -->
+      <g transform="translate(16, 16)">
+        <rect width="258" height="143" rx="6" fill="#1b1115" stroke="#4c1d24" stroke-width="1"/>
+        <circle cx="14" cy="16" r="4" fill="#f43f5e"/>
+        <text x="24" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#fca5a5">别做啥 (3 种常见本能误区)</text>
+
+        <!-- Pitfall 1 -->
+        <g transform="translate(12, 34)">
+          <text x="0" y="12" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#fb7185">✖ 过早安慰:</text>
+          <text x="64" y="12" font-family="-apple-system, sans-serif" font-size="9.5" fill="#fecdd3">“别想太多，都会过去的。”</text>
+          <text x="0" y="24" font-family="-apple-system, sans-serif" font-size="8.5" fill="#fda4af">→ 跳过当下压迫，留下次级羞耻</text>
+        </g>
+
+        <!-- Pitfall 2 -->
+        <g transform="translate(12, 68)">
+          <text x="0" y="12" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#fb7185">✖ 立刻解题:</text>
+          <text x="64" y="12" font-family="-apple-system, sans-serif" font-size="9.5" fill="#fecdd3">“那就更新简历，骑驴找马。”</text>
+          <text x="0" y="24" font-family="-apple-system, sans-serif" font-size="8.5" fill="#fda4af">→ 压缩复杂体验为任务，剥夺探索</text>
+        </g>
+
+        <!-- Pitfall 3 -->
+        <g transform="translate(12, 102)">
+          <text x="0" y="12" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#fb7185">✖ 自信代言:</text>
+          <text x="64" y="12" font-family="-apple-system, sans-serif" font-size="9.5" fill="#fecdd3">“我懂你，这谁受得了。”</text>
+          <text x="0" y="24" font-family="-apple-system, sans-serif" font-size="8.5" fill="#fda4af">→ 将猜测当作确定，投射个人经验</text>
+        </g>
+      </g>
+
+      <!-- RIGHT COLUMN: 要说啥 (Do / Calibrated Practice) -->
+      <g transform="translate(286, 16)">
+        <rect width="258" height="143" rx="6" fill="#0a1d17" stroke="#14532d" stroke-width="1"/>
+        <circle cx="14" cy="16" r="4" fill="#10b981"/>
+        <text x="24" y="20" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" fill="#86efac">要说啥 (更优共情范式)</text>
+
+        <!-- Move 1 -->
+        <g transform="translate(12, 34)">
+          <text x="0" y="12" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#34d399">✔ 贴近体验:</text>
+          <text x="0" y="25" font-family="-apple-system, sans-serif" font-size="9" fill="#d1fae5">“听起来身体先受不了了，但又不得不撑着。”</text>
+        </g>
+
+        <!-- Move 2 -->
+        <g transform="translate(12, 70)">
+          <text x="0" y="12" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#34d399">✔ 探寻症结:</text>
+          <text x="0" y="25" font-family="-apple-system, sans-serif" font-size="9" fill="#d1fae5">“你说不能辞职，主要卡在哪儿？是钱还是责任？”</text>
+        </g>
+
+        <!-- Move 3 -->
+        <g transform="translate(12, 106)">
+          <text x="0" y="12" font-family="ui-monospace, monospace" font-size="9" font-weight="700" fill="#34d399">✔ 归还解释权:</text>
+          <text x="0" y="25" font-family="-apple-system, sans-serif" font-size="9" fill="#d1fae5">“我的理解接近你的感受吗？你随时可以纠正我。”</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
