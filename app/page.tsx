@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { layers, techniques, type LayerId, type PracticeCase } from "./content";
 import { siteBasePath } from "./site";
 
@@ -8,22 +8,22 @@ const repositoryUrl = "https://github.com/holynova/psy-talks";
 
 const sourceLinks = [
   {
-    label: "Clara E. Hill · Helping Skills, 5th ed.",
+    label: "Clara E. Hill — Helping Skills, 5th ed.",
     href: "https://www.apa.org/pubs/books/4311039",
     note: "探索—领悟—行动",
   },
   {
-    label: "Gerard Egan · The Skilled Helper",
+    label: "Gerard Egan — The Skilled Helper",
     href: "https://www.cengage.com/c/the-skilled-helper-a-problem-management-and-opportunity-development-approach-to-helping-10e-egan/9781285065717/",
     note: "问题管理与机会发展",
   },
   {
-    label: "NCBI · Person-Centered Therapy",
+    label: "NCBI — Person-Centered Therapy",
     href: "https://www.ncbi.nlm.nih.gov/books/NBK589708/",
     note: "共情、反映与积极关注",
   },
   {
-    label: "Penn State · Counseling Microskills",
+    label: "Penn State — Counseling Microskills",
     href: "https://courses.worldcampus.psu.edu/welcome/rhs301/001/content/01_lesson/06_page.html",
     note: "提问、释义、情感反映、概述",
   },
@@ -75,10 +75,31 @@ function caseText(practiceCase: PracticeCase) {
 export default function Home() {
   const [activeLayer, setActiveLayer] = useState<LayerId | "all">("all");
   const [query, setQuery] = useState("");
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const focusSearch = (event: KeyboardEvent) => {
+      if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey) return;
+      const target = event.target as HTMLElement | null;
+      if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable)) return;
+      event.preventDefault();
+      searchInputRef.current?.focus();
+    };
+    window.addEventListener("keydown", focusSearch);
+    return () => window.removeEventListener("keydown", focusSearch);
+  }, []);
   const [openSections, setOpenSections] = useState<Record<string, boolean>>(
     Object.fromEntries(initialOpen.map((id) => [id, true])),
   );
-  const [completed, setCompleted] = useState<string[]>([]);
+  const [completed, setCompleted] = useState<string[]>(() => {
+    try {
+      const saved = window.localStorage.getItem("helper-skills-completed");
+      const parsed: unknown = saved ? JSON.parse(saved) : [];
+      return Array.isArray(parsed) ? parsed.filter((id): id is string => typeof id === "string") : [];
+    } catch {
+      return [];
+    }
+  });
   const [testIndex, setTestIndex] = useState(0);
 
   useEffect(() => {
@@ -173,7 +194,7 @@ export default function Home() {
 
       <div id="top" className="hero-grid">
         <section className="hero-copy" aria-labelledby="page-title">
-          <p className="eyebrow">DIALOGUE FIELD NOTES · 01</p>
+          <p className="eyebrow">DIALOGUE FIELD NOTES — 01</p>
           <h1 id="page-title">
             先听懂，
             <br />
@@ -339,7 +360,7 @@ export default function Home() {
             >
               <span className="tab-number">{layer.number}</span>
               <span>
-                {layer.title.replace("先把", "").replace("让", "").replace("把", "")}
+                {layer.shortTitle}
               </span>
             </button>
           ))}
@@ -352,8 +373,9 @@ export default function Home() {
             </span>
             <span className="sr-only">搜索技巧、场景或回复</span>
             <input
+              ref={searchInputRef}
               type="search"
-              placeholder="搜索：具体化、失眠、边界……"
+              placeholder="搜索：具体化、失眠、边界……（按 / 快速定位）"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
             />
@@ -411,7 +433,7 @@ export default function Home() {
                     </div>
                   </div>
                   <span className="layer-count">
-                    {String(layerTechniques.length).padStart(2, "0")} skills
+                    {layerTechniques.length} 项技巧
                   </span>
                 </div>
 
@@ -503,7 +525,7 @@ export default function Home() {
                                 <span className="guidance-label">场景对照</span>
                                 <h4>先辨认失误，再选一种回应</h4>
                               </div>
-                              <span className="practice-count">03 CASES</span>
+                              <span className="practice-count">3 个场景</span>
                             </div>
 
                             <div className="case-list">
@@ -600,7 +622,7 @@ export default function Home() {
         <div className="footer-bottom">
           <span>助人对话 / 练习册</span>
           <span>
-            为学习者整理 · 请在督导与伦理框架内使用 · {" "}
+            为学习者整理，请在督导与伦理框架内使用，{" "}
             <a
               className="footer-repo-link"
               href={repositoryUrl}

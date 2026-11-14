@@ -6,7 +6,7 @@ const stylesheetLink = /<link[^>]+rel=["']stylesheet["'][^>]*>/i;
 
 test("renders the reading edition at the default and legacy v2 paths", async () => {
   const pages = [
-    ["dist/index.html", "助人对话训练手册"],
+    ["dist/index.html", "助人对话练习册"],
     ["dist/v2/index.html", "助人对话训练手册"],
   ];
 

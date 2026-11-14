@@ -6,7 +6,7 @@
   --line: #d6d0c6;
   --white: #fbfaf7;
   --teal: #315e5b;
-  --red: #b4573e;
+  --red: #9e3d34;
   --blue: #426c75;
   --green: #3d735b;
   --serif: Georgia, "Songti SC", "Noto Serif SC", STSong, serif;
@@ -91,7 +91,7 @@ a {
   gap: 10px;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -136,7 +136,7 @@ a {
   margin: 0;
   color: var(--red);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
   line-height: 1.5;
@@ -238,7 +238,7 @@ a {
   justify-content: space-between;
   color: #b8d1c9;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.12em;
 }
 
@@ -394,7 +394,7 @@ a {
 
 .model-label {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -444,7 +444,7 @@ a {
   margin-bottom: 7px;
   color: var(--teal);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.12em;
 }
@@ -498,7 +498,7 @@ a {
   gap: 18px;
   color: var(--red);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.12em;
 }
 
@@ -621,7 +621,7 @@ a {
 .source-index {
   color: var(--tab-accent, var(--red));
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.04em;
 }
 
@@ -708,7 +708,7 @@ a {
   margin: 21px 0 48px;
   color: #888e87;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.03em;
 }
 
@@ -763,7 +763,7 @@ a {
 .practice-count {
   color: #8b9088;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -946,7 +946,7 @@ a {
   margin-bottom: 7px;
   color: var(--green);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
@@ -983,7 +983,7 @@ a {
   display: block;
   margin-bottom: 8px;
   color: var(--layer-accent, var(--red));
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .technique-guidance p {
@@ -1066,7 +1066,7 @@ a {
   margin-bottom: 12px;
   color: #8a675d;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1091,7 +1091,7 @@ a {
   margin: 21px 0 12px;
   color: var(--green);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -1125,7 +1125,7 @@ a {
   justify-content: space-between;
   gap: 8px;
   color: #765b52;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
 }
 
@@ -1134,7 +1134,7 @@ a {
   border: 1px solid #d6b1a6;
   color: #a16a5b;
   font-family: var(--mono);
-  font-size: 8px;
+  font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.04em;
 }
@@ -1173,7 +1173,7 @@ a {
 
 .better-quote {
   color: #2e4d3d;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .better-note {
@@ -1256,7 +1256,7 @@ a {
   border-bottom: 1px solid #90958b;
   color: #56635b;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.08em;
 }
 
@@ -1281,7 +1281,7 @@ a {
 
 .footer-heading .section-kicker {
   grid-column: 1 / -1;
-  color: #c88370;
+  color: #c97a6c;
 }
 
 .footer-heading h2 {
@@ -1319,11 +1319,11 @@ a {
 
 .source-item:hover,
 .source-item:focus-visible {
-  color: #f1c4b7;
+  color: #eec3b6;
 }
 
 .source-index {
-  color: #c88370;
+  color: #c97a6c;
 }
 
 .source-copy {
@@ -1337,12 +1337,12 @@ a {
 
 .source-copy small {
   color: #93a198;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .source-arrow {
   color: #a7b1a8;
-  font-size: 17px;
+  font-size: 16px;
   transition: transform 160ms ease;
 }
 
@@ -1357,7 +1357,7 @@ a {
   margin-top: 60px;
   color: #84918a;
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.04em;
 }
 
@@ -1453,7 +1453,7 @@ a {
   }
 
   .masthead-meta {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .hero-copy {
@@ -1468,7 +1468,7 @@ a {
   }
 
   .hero-lede {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.75;
   }
 
@@ -1582,7 +1582,7 @@ a {
   .layer-tab {
     min-height: 48px;
     padding: 0 13px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .tool-row {
@@ -1684,7 +1684,7 @@ a {
   }
 
   .practice-count {
-    font-size: 8px;
+    font-size: 11px;
   }
 
   .case-block summary {
@@ -1750,7 +1750,7 @@ a {
   --v2-muted: #6a7073;
   --v2-line: #d9dad6;
   --v2-sidebar: #f1f1ee;
-  --v2-link: #2c7ab6;
+  --v2-link: #2e6b62;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
@@ -1767,7 +1767,7 @@ a {
   --v2-muted: #aab1ad;
   --v2-line: #424948;
   --v2-sidebar: #202525;
-  --v2-link: #83b8df;
+  --v2-link: #8fc4b8;
 }
 
 .v2-sidebar {
@@ -1810,7 +1810,7 @@ a {
 
 .v2-brand > span {
   color: var(--v2-muted);
-  font-size: 10px;
+  font-size: 11px;
   white-space: nowrap;
 }
 
@@ -1848,7 +1848,7 @@ a {
   margin: 0 8px 8px;
   color: var(--v2-muted);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 0.04em;
 }
 
@@ -1877,7 +1877,7 @@ a {
 .v2-toc a small {
   color: var(--v2-muted);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .v2-toc a:hover,
@@ -1904,7 +1904,7 @@ a {
 .v2-sidebar-bottom a {
   color: var(--v2-muted);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   text-decoration: none;
 }
 
@@ -1955,7 +1955,7 @@ a {
   padding-top: 7px;
   color: var(--v2-link);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -1969,7 +1969,7 @@ a {
 .v2-eyebrow {
   color: var(--v2-link);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
@@ -2007,7 +2007,7 @@ a {
 .v2-recall-card > span {
   color: var(--v2-muted);
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 11px;
 }
 
 .v2-recall-card p {
@@ -2110,7 +2110,7 @@ a {
   border-radius: 4px;
   color: var(--v2-accent);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.05em;
   white-space: nowrap;
 }
@@ -2261,7 +2261,7 @@ a {
 }
 
 .v2-response h4 small {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
 }
 
@@ -2286,7 +2286,7 @@ a {
 .v2-reply {
   margin: 0;
   color: var(--v2-ink);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -2326,7 +2326,7 @@ a {
   margin-top: 27px;
   color: var(--v2-muted);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .v2-footer a {
@@ -2498,11 +2498,11 @@ a {
   .v2-sidebar-bottom button {
     min-height: 29px;
     padding: 0 9px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .v2-sidebar-bottom a {
-    font-size: 9px;
+    font-size: 11px;
   }
 
   .v2-main {
@@ -2636,13 +2636,13 @@ a {
 
   .v2-case-label {
     margin-bottom: 10px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .v2-case blockquote {
     margin: 0 0 19px;
     padding-left: 12px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.7;
   }
 
