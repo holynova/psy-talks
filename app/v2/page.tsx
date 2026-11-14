@@ -124,7 +124,7 @@ function CaseComparison({
             {practiceCase.better.map((reply, index) => (
               <li key={reply}>
                 <p className="v2-reply">{removeOuterQuotes(reply)}</p>
-                <p className="v2-why">回应 {String.fromCharCode(65 + index)} · 保留对方的选择权</p>
+                <p className="v2-why">回应 {String.fromCharCode(65 + index)}，保留对方的选择权</p>
               </li>
             ))}
           </ul>
@@ -136,7 +136,21 @@ function CaseComparison({
 }
 
 export default function ReadingEdition() {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(() => {
+    try {
+      return window.localStorage.getItem("psy-talks-v2-theme") === "dark";
+    } catch {
+      return false;
+    }
+  });
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem("psy-talks-v2-theme", isDark ? "dark" : "light");
+    } catch {
+      // storage unavailable: theme just won't persist
+    }
+  }, [isDark]);
   const [recallIndex, setRecallIndex] = useState(0);
   const [activeTechnique, setActiveTechnique] = useState("nonjudgmental-stance");
 
@@ -249,7 +263,7 @@ export default function ReadingEdition() {
             {section.ids.map((id, techniqueIndex) => {
               const technique = findTechnique(id);
               const number = sectionIndex * 6 + techniqueIndex + 1;
-              const accent = sectionIndex === 0 ? "#2c7ab6" : sectionIndex === 1 ? "#71599b" : "#3b8063";
+              const accent = sectionIndex === 0 ? "#2e6b62" : sectionIndex === 1 ? "#71599b" : "#3b8063";
               return (
                 <article
                   className="v2-technique"
@@ -297,7 +311,7 @@ export default function ReadingEdition() {
         <footer className="v2-footer">
           <p>好的回应不一定漂亮，但应该让对方更接近自己的经验，而不是更接近你的答案。</p>
           <div>
-            <span>助人技术 · 阅读版 v2</span>
+            <span>助人技术 — 阅读版 v2</span>
             <a href={repositoryUrl} target="_blank" rel="noreferrer">GitHub 源码 ↗</a>
           </div>
         </footer>

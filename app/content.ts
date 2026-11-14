@@ -33,6 +33,7 @@ export const layers: Array<{
   id: LayerId;
   number: string;
   title: string;
+  shortTitle: string;
   subtitle: string;
   accent: string;
 }> = [
@@ -40,13 +41,15 @@ export const layers: Array<{
     id: "relationship",
     number: "01",
     title: "先把关系站稳",
+    shortTitle: "关系",
     subtitle: "态度先于技巧",
-    accent: "#b4573e",
+    accent: "#9e3d34",
   },
   {
     id: "clarify",
     number: "02",
     title: "把模糊说清楚",
+    shortTitle: "澄清",
     subtitle: "事实与体验",
     accent: "#426c75",
   },
@@ -54,6 +57,7 @@ export const layers: Array<{
     id: "emotion",
     number: "03",
     title: "让情绪被看见",
+    shortTitle: "情绪",
     subtitle: "命名而不盖章",
     accent: "#a26436",
   },
@@ -61,6 +65,7 @@ export const layers: Array<{
     id: "pattern",
     number: "04",
     title: "让模式浮出来",
+    shortTitle: "模式",
     subtitle: "从片段到理解",
     accent: "#6b5b82",
   },
@@ -68,6 +73,7 @@ export const layers: Array<{
     id: "action",
     number: "05",
     title: "把领悟落到行动",
+    shortTitle: "行动",
     subtitle: "由来访者做主",
     accent: "#3d735b",
   },
@@ -75,6 +81,7 @@ export const layers: Array<{
     id: "safety",
     number: "06",
     title: "守住边界与安全",
+    shortTitle: "安全",
     subtitle: "专业底线",
     accent: "#7a4d5a",
   },
